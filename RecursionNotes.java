@@ -22,7 +22,7 @@ public class RecursionNotes
     public static String reverse(String str)
     {
         //  must have a terminating case, or base case (i.e., "the empty loaf")
-        if(str.equals("i"))
+        if(str.equals(""))
         {
             return str;
         }

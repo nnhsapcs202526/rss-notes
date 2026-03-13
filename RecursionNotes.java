@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class RecursionNotes here.
@@ -38,6 +39,23 @@ public class RecursionNotes
         String strReversed = restOfStringReversed + firstChar;
         return strReversed;
             
+    }
+    
+    public static ArrayList<Integer> makeList( int n )
+    {
+        ArrayList<Integer> tempList = null;
+        if( n <= 0 )  					// The smallest list we can make (terminating condition)
+        {
+            tempList = new ArrayList<Integer>();
+            return tempList;
+        }
+        else        					// All other lists are created here
+        {
+            tempList = makeList( n - 1 );  	        // Pass on the smaller problem to solve elsewhere
+            tempList.add( n );             	        //Add our contribution to solving the larger problem 
+        }
+
+        return tempList;	
     }
 
 }

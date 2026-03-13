@@ -25,23 +25,6 @@ public class PairSolutions
     }
 
     
-    
-    
-    public static ArrayList<Integer> reverseList( ArrayList<Integer> tList )
-    {
-        ArrayList<Integer> list = ListMethods.deepClone( tList );
-        if(( list.size() == 1 ) || ( list.size() == 0 ))
-        {
-            return list;
-        }
-        else
-        {
-            Integer tempInt = list.remove( 0 );
-            list = ListMethods.reverseList( list );
-            list.add( tempInt );
-        }
-
-        return list;
-    }
+ 
 }
 
